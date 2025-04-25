@@ -14,9 +14,8 @@ class Move(metaclass=PoolMeta):
 
     @classmethod
     def __setup__(cls):
-        super(Move, cls).__setup__()
-        if 'post_number' not in cls._check_modify_exclude:
-            cls._check_modify_exclude.append('post_number')
+        super().__setup__()
+        cls._check_modify_exclude.append('post_number')
 
 
 class RenumberMovesStart(ModelView):
