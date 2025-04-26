@@ -50,7 +50,7 @@ requires += [get_require_version('trytond_account')]
 
 tests_require = [
     get_require_version('proteus'),
-    
+
     ]
 
 series = '%s.%s' % (major_version, minor_version)
