@@ -15,7 +15,8 @@ class Move(metaclass=PoolMeta):
     @classmethod
     def __setup__(cls):
         super().__setup__()
-        cls._check_modify_exclude.add('post_number')
+        if 'number' not in cls._check_modify_exclude:
+            cls._check_modify_exclude.add('number')
 
 
 class RenumberMovesStart(ModelView):
@@ -46,7 +47,7 @@ class RenumberMoves(Wizard):
     def do_renumber(self, action):
         pool = Pool()
         Move = pool.get('account.move')
-        Sequence = pool.get('ir.sequence')
+        Sequence = pool.get('ir.sequence.strict')
         Warning = pool.get('res.user.warning')
 
         draft_moves = Move.search([
@@ -60,10 +61,10 @@ class RenumberMoves(Wizard):
                     gettext('account_move_renumber.draft_moves_in_fiscalyear',
                         fiscalyear=self.start.fiscalyear.rec_name))
 
-        sequences = set([self.start.fiscalyear.post_move_sequence])
+        sequences = set([self.start.fiscalyear.move_sequence])
         for period in self.start.fiscalyear.periods:
-            if period.post_move_sequence:
-                sequences.add(period.post_move_sequence)
+            if period.move_sequence:
+                sequences.add(period.move_sequence)
 
         Sequence.write(list(sequences), {
                 'number_next': self.start.first_number,
@@ -71,7 +72,7 @@ class RenumberMoves(Wizard):
 
         moves_to_renumber = Move.search([
                 ('period.fiscalyear', '=', self.start.fiscalyear.id),
-                ('post_number', '!=', None),
+                ('number', '!=', None),
                 ],
             order=[
                 ('date', 'ASC'),
@@ -84,15 +85,15 @@ class RenumberMoves(Wizard):
                     date=move.date,
                     company=self.start.fiscalyear.company.id):
                 to_write.extend(([move], {
-                            'post_number': (
-                                move.period.post_move_sequence_used.get()),
+                            'number': (
+                                move.period.move_sequence_used.get()),
                             }))
         if to_write:
             Move.write(*to_write)
 
         action['pyson_domain'] = PYSONEncoder().encode([
             ('period.fiscalyear', '=', self.start.fiscalyear.id),
-            ('post_number', '!=', None),
+            ('number', '!=', None),
             ])
         return action, {}
 

@@ -71,11 +71,11 @@ class Test(unittest.TestCase):
         moves = Move.find([], order=[('id', 'ASC')])
         self.assertEqual(len(moves), 10)
         self.assertEqual(
-            all(move.post_number == str(i + 1) for i, move in enumerate(moves)),
+            all(move.number == str(i + 1) for i, move in enumerate(moves)),
             True)
         moves = Move.find([], order=[('date', 'ASC'), ('id', 'ASC')])
         self.assertEqual(
-            all(move.post_number == str(i + 1) for i, move in enumerate(moves)),
+            all(move.number == str(i + 1) for i, move in enumerate(moves)),
             False)
 
         # Renumber moves
@@ -88,6 +88,6 @@ class Test(unittest.TestCase):
         moves = Move.find([], order=[('date', 'ASC'), ('id', 'ASC')])
         self.assertEqual(len(moves), 10)
         self.assertEqual(
-            all(move.post_number == str(i + 1) for i, move in enumerate(moves)),
+            all(move.number == str(i + 1) for i, move in enumerate(moves)),
             True)
-        self.assertEqual(moves[-1].post_number, '10')
+        self.assertEqual(moves[-1].number, '10')
