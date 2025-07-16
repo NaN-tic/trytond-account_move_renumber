@@ -1,10 +1,17 @@
-# 
+#
+# SPDX-FileCopyrightText: 2025 juanjo <juanjo.garcia@nan-tic.com>
 msgid ""
-msgstr "Content-Type: text/plain; charset=utf-8\n"
-
-msgctxt "error:account.move.renumber:"
-msgid "There are Draft Moves in Fiscal Year \"%(fiscalyear)s\"."
-msgstr "El ejercicio fiscal \"%(fiscalyear)s\" tiene asientos en borrador."
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: juanjo <juanjo.garcia@nan-tic.com>\n"
+"PO-Revision-Date: 2025-07-16 12:19+0200\n"
+"Project-Id-Version: \n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca_ES\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 msgctxt "field:account.move,company:"
 msgid "Company"
@@ -18,24 +25,21 @@ msgctxt "field:account.move.renumber.start,fiscalyear:"
 msgid "Fiscal Year"
 msgstr "Ejercicio fiscal"
 
-msgctxt "field:account.move.renumber.start,id:"
-msgid "ID"
-msgstr "ID"
-
-msgctxt "model:account.move.renumber.start,name:"
-msgid "Renumber Account Moves Start"
-msgstr "Renumera asientos Inicio"
+msgctxt "model:account.move.renumber.start,string:"
+msgid "Account Move Renumber Start"
+msgstr "Inicio de Renumeración de asientos"
 
 msgctxt "model:ir.action,name:wizard_move_renumber"
 msgid "Renumber Moves"
 msgstr "Renumera asientos"
 
+#, python-format
+msgctxt "model:ir.message,text:draft_moves_in_fiscalyear"
+msgid "There are Draft Moves in Fiscal Year \"%(fiscalyear)s\"."
+msgstr "El ejercicio fiscal \"%(fiscalyear)s\" tiene asientos en borrador."
+
 msgctxt "model:ir.ui.menu,name:menu_move_renumber"
 msgid "Renumber Moves"
-msgstr "Renumera asientos"
-
-msgctxt "view:account.move.renumber.start:"
-msgid "Renumber Account Moves"
 msgstr "Renumera asientos"
 
 msgctxt "view:account.move.renumber.start:"
@@ -45,6 +49,14 @@ msgid ""
 msgstr ""
 "Este proceso tardará algunos minutos. Por favor, asegúrese que nadie crea o "
 "confirma asientos del ejercicio fiscal seleccionado."
+
+msgctxt "view:account.move.renumber.start:"
+msgid ""
+"This process will take a few minutes. Please, ensure that nobody create or "
+"confirm moves for selected fiscal year."
+msgstr ""
+"Este proceso tardará unos minutos. Asegúrese de que nadie cree ni confirme mov"
+"imientos para el año fiscal seleccionado."
 
 msgctxt "wizard_button:account.move.renumber,start,end:"
 msgid "Cancel"
