@@ -1,10 +1,6 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
-
-msgctxt "error:account.move.renumber:"
-msgid "There are Draft Moves in Fiscal Year \"%(fiscalyear)s\"."
-msgstr "L'exercici fiscal \"%(fiscalyear)s\" té assentaments en esborrany."
 
 msgctxt "field:account.move,company:"
 msgid "Company"
