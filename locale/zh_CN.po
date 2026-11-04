@@ -1,0 +1,55 @@
+#
+msgid ""
+msgstr ""
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "field:account.move,company:"
+msgid "Company"
+msgstr "公司"
+
+msgctxt "field:account.move.renumber.start,first_number:"
+msgid "First Number"
+msgstr "起始编号"
+
+msgctxt "field:account.move.renumber.start,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "会计年度"
+
+msgctxt "model:account.move.renumber.start,string:"
+msgid "Account Move Renumber Start"
+msgstr "会计凭证重新编号：开始"
+
+msgctxt "model:ir.action,name:wizard_move_renumber"
+msgid "Renumber Moves"
+msgstr "重新编号凭证"
+
+#, python-format
+msgctxt "model:ir.message,text:draft_moves_in_fiscalyear"
+msgid "There are Draft Moves in Fiscal Year \"%(fiscalyear)s\"."
+msgstr "会计年度“%(fiscalyear)s”中存在草稿凭证。"
+
+msgctxt "model:ir.ui.menu,name:menu_move_renumber"
+msgid "Renumber Moves"
+msgstr "重新编号凭证"
+
+msgctxt "view:account.move.renumber.start:"
+msgid ""
+"This process will take a few minutes. Please, ensure that nobody create or "
+"confirm moves for selected fiscal year."
+msgstr "此过程需要几分钟。请确保期间没有人为所选会计年度创建或确认凭证。"
+
+msgctxt "wizard_button:account.move.renumber,start,end:"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "wizard_button:account.move.renumber,start,renumber:"
+msgid "Renumber"
+msgstr "重新编号"
+
+msgctxt "model:account.move.renumber.start,name:"
+msgid "Renumber Account Moves Start"
+msgstr "会计凭证重新编号：开始"
