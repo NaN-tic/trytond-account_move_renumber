@@ -1,0 +1,58 @@
+#
+msgid ""
+msgstr ""
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "field:account.move,company:"
+msgid "Company"
+msgstr "Cég"
+
+msgctxt "field:account.move.renumber.start,first_number:"
+msgid "First Number"
+msgstr "Első sorszám"
+
+msgctxt "field:account.move.renumber.start,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "Üzleti év"
+
+msgctxt "model:account.move.renumber.start,string:"
+msgid "Account Move Renumber Start"
+msgstr "Könyvelési tételek újraszámozása: indítás"
+
+msgctxt "model:ir.action,name:wizard_move_renumber"
+msgid "Renumber Moves"
+msgstr "Könyvelési tételek újraszámozása"
+
+#, python-format
+msgctxt "model:ir.message,text:draft_moves_in_fiscalyear"
+msgid "There are Draft Moves in Fiscal Year \"%(fiscalyear)s\"."
+msgstr ""
+"A(z) „%(fiscalyear)s” üzleti évben piszkozat könyvelési tételek vannak."
+
+msgctxt "model:ir.ui.menu,name:menu_move_renumber"
+msgid "Renumber Moves"
+msgstr "Könyvelési tételek újraszámozása"
+
+msgctxt "view:account.move.renumber.start:"
+msgid ""
+"This process will take a few minutes. Please, ensure that nobody create or "
+"confirm moves for selected fiscal year."
+msgstr ""
+"A folyamat néhány percet vesz igénybe. Gondoskodjon arról, hogy közben senki"
+" ne hozzon létre vagy erősítsen meg tételeket a kiválasztott üzleti évben."
+
+msgctxt "wizard_button:account.move.renumber,start,end:"
+msgid "Cancel"
+msgstr "Mégse"
+
+msgctxt "wizard_button:account.move.renumber,start,renumber:"
+msgid "Renumber"
+msgstr "Újraszámozás"
+
+msgctxt "model:account.move.renumber.start,name:"
+msgid "Renumber Account Moves Start"
+msgstr "Könyvelési tételek újraszámozása: indítás"
