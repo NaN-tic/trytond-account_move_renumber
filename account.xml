@@ -17,4 +17,14 @@
         <menuitem action="wizard_move_renumber" id="menu_move_renumber"
             parent="account.menu_processing" sequence="19"/>
     </data>
+    <data>
+        <record model="ir.action-res.group" id="move_renumber_group_account">
+            <field name="action" ref="wizard_move_renumber"/>
+            <field name="group" ref="account.group_account"/>
+        </record>
+        <record model="ir.action-res.group" id="move_renumber_group_account_admin">
+            <field name="action" ref="wizard_move_renumber"/>
+            <field name="group" ref="account.group_account_admin"/>
+        </record>
+    </data>
 </tryton>
